@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memori Smile SMP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f4f6f9;
+      --text-color: #2c3e50;
+      --card-bg: white;
+      --accent-color: #2193b0;
+      --button-bg: #e1f5fe;
+      --button-text: #0277bd;
+    }
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --card-bg: #1e1e1e;
+      --accent-color: #90caf9;
+      --button-bg: #263238;
+      --button-text: #bbdefb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(5px);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+    }
+
+    .toggle-btn {
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      backdrop-filter: blur(5px);
+    }
+
+    .section {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      transition: 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section h2 {
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+
+    .images img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .videos a {
+      display: inline-block;
+      margin-top: 8px;
+      margin-right: 10px;
+      padding: 10px 16px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .goodbye {
+      background: #fff9ec;
+      text-align: center;
+      padding: 30px;
+      border-radius: 16px;
+      font-size: 1.2em;
+      color: #5d4037;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    body.dark .goodbye {
+      background: #2c2c2c;
+      color: #f5f5f5;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 20px;
+      color: #999;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smile SMP</h1>
+    <p>Web Untuk mengenang Smile SMP</p>
+  </header>
+
+  <nav>
+    <div class="links" style="background: #ffffffaa; padding: 10px 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <a href="#tentang">Tentang Smile 😁</a>
+      <a href="#faq">Pertanyaan ❓️</a>
+      <a href="#gambar">Kenangan 🥺🖼</a>
+      <a href="#video">Video kenangan 🥺📽</a>
+    </div>
+    <button class="toggle-btn" onclick="toggleMode()">Mode 🌕 | ☀️</button>
+  </nav>
+
+  <div class="container">
+    <div class="section" id="tentang">
+      <h2>Tentang Smile SMP</h2>
+      <p>Smile SMP dimulai pada tahun 2024 sebagai server khusus konten kreator Minecraft. Meskipun server ini hanya bertahan sebentar, memori yang ditinggalkan tetap di kenang para Memeber 🥺.</p>
+    </div>
+
+    <div class="section" id="faq">
+      <h2>Pertanyaan</h2>
+      <p><strong>Apakah Smile SMP akan kembali?</strong> Mungkin tidak, tapi harapan tetap ada jika sang owner mengizinkan.</p>
+    </div>
+
+    <div class="section images" id="gambar">
+      <h2>Kenangan Gambar (Season 1)</h2>
+      <img src="Kenangan.png" alt="Kenangan 1">
+      <img src="Kenangan2.png" alt="Kenangan 2">
+      <img src="Kenangan 3.png" alt="Kenangan 3">
+    </div>
+
+    <div class="section videos" id="video">
+      <h2>Video Memori TikTok</h2>
+      <a href="https://vt.tiktok.com/ZSB2oqFTH/" target="_blank">Bang Chip</a>
+      <a href="https://vt.tiktok.com/ZSBj1hkm9/" target="_blank">Bang Sultan</a>
+      <a href="https://vt.tiktok.com/ZSBj15KQ8/" target="_blank">Bang Huzahir</a>
+    </div>
+
+    <div class="goodbye">
+      <p>See you Smile 🥺</p>
+      <p>Goodbye Smile🙂 Goodbye Smile, I hope you can come back and your name can be popular again, even though it's not possible 🙂🥺.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 - Memories Smile SMP 🥺
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
